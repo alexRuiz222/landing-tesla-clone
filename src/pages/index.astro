@@ -2,6 +2,7 @@
 import ChargeSection from "../components/ChargeSection.astro";
 import HeroSection from "../components/HeroSection.astro";
 import LandingHeader from "../components/LandingHeader.astro";
+import Section from "../components/Section.astro";
 
 import Layout from "../layouts/Layout.astro";
 ---
@@ -12,13 +13,50 @@ import Layout from "../layouts/Layout.astro";
     class="snap-y snap-mandatory relative w-full h-screen overflow-auto scroll"
   >
     <div class="snap-center">
-      <HeroSection />
+      <Section
+        title="Experience Tesla"
+        subtitle="Schedule a Demo Drive Today"
+        color="white"
+      >
+        <video
+          slot="background"
+          class="object-center object-cover h-full w-full"
+          autoplay
+          muted
+          loop
+          src="/video.webm"></video>
+        <div slot="footer">
+          <a
+            class="border-[3px] border-white bg-white/5 backdrop-blur-sm text-sm rounded font-medium text-white px-12 py-2 inline-block hover:bg-white hover:text-black transition-colors"
+            href="">Demo Drive</a
+          >
+        </div>
+      </Section>
     </div>
     <div class="snap-center">
-      <ChargeSection />
-    </div>
-    <div class="snap-center">
-      <HeroSection />
+      <Section
+        title="Model Y"
+        subtitle="Starting at $40,240"
+        secSubtitle="After Federal Tax Credit"
+        color="black"
+      >
+        <img
+          slot="background"
+          src="/model-y.webp"
+          alt=""
+          class="h-full w-full object-cover object-center"
+        />
+        <div slot="footer" class="flex gap-x-6 mx-auto">
+          <a
+            class="bg-white text-black text-sm rounded font-medium px-12 py-2 inline-block hover:bg-black hover:text-white transition-colors"
+            href="">Explore Invasdentory</a
+          >
+          <a
+            class="bg-gray-900/50 text-white text-sm rounded font-medium text-white px-12 py-2 inline-block hover:bg-black hover:text-white transition-colors"
+            href="">Custom Order</a
+          >
+        </div>
+      </Section>
     </div>
   </main>
 </Layout>
