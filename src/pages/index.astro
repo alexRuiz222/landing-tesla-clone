@@ -4,6 +4,12 @@ import Section from "../components/Section.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
+<style>
+  .appear-footer {
+    opacity: 1;
+  }
+</style>
+
 <Layout title="Welcome to Tesla Clone.">
   <LandingHeader />
   <main
@@ -11,17 +17,24 @@ import Layout from "../layouts/Layout.astro";
   >
     <div class="snap-center">
       <Section
-        title="Experience Tesla"
+        title="Experience Nikola"
         subtitle="Schedule a Demo Drive Today"
         color="white"
       >
         <video
           slot="background"
-          class="object-center object-cover h-full w-full"
+          class="object-center object-cover h-full w-full md:block sm:hidden"
           autoplay
           muted
           loop
-          src="/video.webm"></video>
+          src="/desktop/video.webm"></video>
+        <video
+          slot="background"
+          class="object-center object-cover h-full w-full sm:block md:hidden"
+          autoplay
+          muted
+          loop
+          src="/mobile/mobile-video.webm"></video>
         <div slot="footer">
           <a
             class="border-[3px] border-white bg-white/5 backdrop-blur-sm text-sm rounded font-medium text-white px-12 py-2 inline-block hover:bg-white hover:text-black transition-colors"
@@ -39,9 +52,15 @@ import Layout from "../layouts/Layout.astro";
       >
         <img
           slot="background"
-          src="/model-y.webp"
+          src="/mobile/mobile-model-y.jpg"
           alt=""
-          class="h-full w-full object-cover object-center"
+          class="h-full w-full object-cover object-center sm:block md:hidden"
+        />
+        <img
+          slot="background"
+          src="/desktop/model-y.webp"
+          alt=""
+          class="h-full w-full object-cover object-center md:block sm:hidden"
         />
         <div
           slot="footer"
@@ -59,12 +78,23 @@ import Layout from "../layouts/Layout.astro";
       </Section>
     </div>
     <div class="snap-center">
-      <Section title="Model S" subtitle="Explore Inventory" color="black">
+      <Section
+        title="Model S"
+        subtitle="Explore Inventory"
+        underline="true"
+        color="black"
+      >
         <img
           slot="background"
-          src="/model-s.webp"
+          src="/mobile/mobile-model-s.webp"
           alt=""
-          class="h-full w-full object-cover object-center"
+          class="h-full w-full object-cover object-center sm:block md:hidden"
+        />
+        <img
+          slot="background"
+          src="/desktop/model-s.webp"
+          alt=""
+          class="h-full w-full object-cover object-center md:block sm:hidden"
         />
         <div
           slot="footer"
@@ -80,6 +110,215 @@ import Layout from "../layouts/Layout.astro";
           >
         </div>
       </Section>
+    </div>
+    <div class="snap-center">
+      <Section
+        title="Model X"
+        subtitle="Explore Inventory"
+        underline="true"
+        color="black"
+      >
+        <img
+          slot="background"
+          src="/mobile/mobile-model-x.webp"
+          alt=""
+          class="h-full w-full object-cover object-center sm:block md:hidden"
+        />
+        <img
+          slot="background"
+          src="/desktop/model-x.jpg"
+          alt=""
+          class="h-full w-full object-cover object-center md:block sm:hidden"
+        />
+        <div
+          slot="footer"
+          class="flex flex-col md:flex-row gap-x-6 mx-6 md:mx-auto"
+        >
+          <a
+            class="bg-white text-black text-sm rounded font-medium px-12 py-3 inline-block hover:bg-black hover:text-white transition-colors mb-4 md:mb-0"
+            href="">Custom Order</a
+          >
+          <a
+            class="bg-gray-900/50 text-white text-sm rounded font-medium text-white px-12 py-3 inline-block hover:bg-black hover:text-white transition-colors mb-4 md:mb-0"
+            href="">Demo Drive</a
+          >
+        </div>
+      </Section>
+    </div>
+    <div class="snap-center">
+      <Section
+        title="Model 3"
+        subtitle="Starting at $32,740"
+        secSubtitle="After Federal Tax Credit"
+        color="white"
+      >
+        <video
+          slot="background"
+          class="object-center object-cover h-full w-full"
+          autoplay
+          muted
+          loop
+          src="/desktop/Model-3-video.mp4"></video>
+
+        <div
+          slot="footer"
+          class="flex flex-col md:flex-row gap-x-6 mx-6 md:mx-auto"
+        >
+          <a
+            class="bg-white text-black text-sm rounded font-medium px-12 py-3 inline-block hover:bg-black hover:text-white transition-colors mb-4 md:mb-0"
+            href="">Custom Order</a
+          >
+          <a
+            class="bg-gray-900/50 text-white text-sm rounded font-medium text-white px-12 py-3 inline-block hover:bg-black hover:text-white transition-colors mb-4 md:mb-0"
+            href="">Demo Drive</a
+          >
+        </div>
+      </Section>
+    </div>
+    <div class="snap-center">
+      <Section
+        title="Solar Panels"
+        subtitle="Schedule a Virtual Consultation"
+        underline="true"
+        color="black"
+      >
+        <img
+          slot="background"
+          src="/mobile/mobile-solar-panels.jpg"
+          alt=""
+          class="h-full w-full object-cover object-center sm:block md:hidden"
+        />
+        <img
+          slot="background"
+          src="/desktop/solar-panels.jpg"
+          alt=""
+          class="h-full w-full object-cover object-center md:block sm:hidden"
+        />
+        <div
+          slot="footer"
+          class="flex flex-col md:flex-row gap-x-6 mx-6 md:mx-auto"
+        >
+          <a
+            class="bg-white text-black text-sm rounded font-medium px-12 py-3 inline-block hover:bg-black hover:text-white transition-colors mb-4 md:mb-0"
+            href="">Order Now</a
+          >
+          <a
+            class="bg-gray-900/50 text-white text-sm rounded font-medium text-white px-12 py-3 inline-block hover:bg-black hover:text-white transition-colors mb-4 md:mb-0"
+            href="">Learn More</a
+          >
+        </div>
+      </Section>
+    </div>
+    <div class="snap-center">
+      <Section
+        title="Solar Roof"
+        subtitle="Produce Clean Energy From Your Roof"
+        underline="false"
+        color="black"
+      >
+        <img
+          slot="background"
+          src="/mobile/mobile-solarRoof.jpg"
+          alt=""
+          class="h-full w-full object-cover object-center sm:block md:hidden"
+        />
+        <img
+          slot="background"
+          src="/desktop/solarRoof.jpg"
+          alt=""
+          class="h-full w-full object-cover object-center md:block sm:hidden"
+        />
+        <div
+          slot="footer"
+          class="flex flex-col md:flex-row gap-x-6 mx-6 md:mx-auto"
+        >
+          <a
+            class="bg-white text-black text-sm rounded font-medium px-12 py-3 inline-block hover:bg-black hover:text-white transition-colors mb-4 md:mb-0"
+            href="">Order Now</a
+          >
+          <a
+            class="bg-gray-900/50 text-white text-sm rounded font-medium text-white px-12 py-3 inline-block hover:bg-black hover:text-white transition-colors mb-4 md:mb-0"
+            href="">Learn More</a
+          >
+        </div>
+      </Section>
+    </div>
+    <div class="snap-center">
+      <Section title="Powewall" color="black">
+        <img
+          slot="background"
+          src="/mobile/mobile-powerwall.jpg"
+          alt=""
+          class="h-full w-full object-cover object-center sm:block md:hidden"
+        />
+        <img
+          slot="background"
+          src="/desktop/powerwall.jpg"
+          alt=""
+          class="h-full w-full object-cover object-center md:block sm:hidden"
+        />
+        <div
+          slot="footer"
+          class="flex flex-col md:flex-row gap-x-6 mx-6 md:mx-auto"
+        >
+          <a
+            class="bg-white text-black text-sm rounded font-medium px-12 py-3 inline-block hover:bg-black hover:text-white transition-colors mb-4 md:mb-0"
+            href="">Order Now</a
+          >
+          <a
+            class="bg-gray-900/50 text-white text-sm rounded font-medium text-white px-12 py-3 inline-block hover:bg-black hover:text-white transition-colors mb-4 md:mb-0"
+            href="">Learn More</a
+          >
+        </div>
+      </Section>
+    </div>
+    <div class="snap-center">
+      <Section title="Accessories" color="black">
+        <img
+          slot="background"
+          src="/mobile/mobile-accessories.webp"
+          alt=""
+          class="h-full w-full object-cover object-center sm:block md:hidden"
+        />
+        <img
+          slot="background"
+          src="/desktop/accessories.jpg"
+          alt=""
+          class="h-full w-full object-cover object-center md:block sm:hidden"
+        />
+        <div
+          slot="footer"
+          class="flex flex-col md:flex-row gap-x-6 mx-6 md:mx-auto"
+        >
+          <a
+            class="bg-white text-black text-sm rounded font-medium px-12 py-3 inline-block hover:bg-black hover:text-white transition-colors mb-4 md:mb-0"
+            href="">Shop Now</a
+          >
+        </div>
+      </Section>
+    </div>
+    <div class="snap-center relative">
+      <!-- md:block sm:hidden -->
+      <footer
+        class="absolute bottom-0 left-0 w-full z-50 py-3 transition-opacity duration-500 md:block sm:hidden"
+      >
+        <div
+          class="flex justify-center items-center text-slate-200 [&>div]:mx-2 text-sm"
+        >
+          <div>Alex 2023</div>
+          <div>Vehicle Recalls</div>
+          <div>News</div>
+          <div class="underline underline-offset-4">For Learning Propouses</div>
+        </div>
+      </footer>
+      <footer class="bg-black text-white py-8 sm:block md:hidden">
+        <ul class="text-center text-xs [&>li]:my-2">
+          <li>Alex 2023</li>
+          <li>Vehicle Recalls</li>
+          <li>News</li>
+          <li class="underline underline-offset-4">For Learning Propouses</li>
+        </ul>
+      </footer>
     </div>
   </main>
 </Layout>
