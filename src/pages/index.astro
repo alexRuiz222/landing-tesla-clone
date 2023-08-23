@@ -1,9 +1,6 @@
 ---
-import ChargeSection from "../components/ChargeSection.astro";
-import HeroSection from "../components/HeroSection.astro";
 import LandingHeader from "../components/LandingHeader.astro";
 import Section from "../components/Section.astro";
-
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -46,14 +43,40 @@ import Layout from "../layouts/Layout.astro";
           alt=""
           class="h-full w-full object-cover object-center"
         />
-        <div slot="footer" class="flex gap-x-6 mx-auto">
+        <div
+          slot="footer"
+          class="flex flex-col md:flex-row gap-x-6 mx-6 md:mx-auto"
+        >
           <a
-            class="bg-white text-black text-sm rounded font-medium px-12 py-2 inline-block hover:bg-black hover:text-white transition-colors"
+            class="bg-white text-black text-sm rounded font-medium px-12 py-3 inline-block hover:bg-black hover:text-white transition-colors mb-4 md:mb-0"
             href="">Explore Invasdentory</a
           >
           <a
-            class="bg-gray-900/50 text-white text-sm rounded font-medium text-white px-12 py-2 inline-block hover:bg-black hover:text-white transition-colors"
+            class="bg-gray-900/50 text-white text-sm rounded font-medium text-white px-12 py-3 inline-block hover:bg-black hover:text-white transition-colors mb-4 md:mb-0"
             href="">Custom Order</a
+          >
+        </div>
+      </Section>
+    </div>
+    <div class="snap-center">
+      <Section title="Model S" subtitle="Explore Inventory" color="black">
+        <img
+          slot="background"
+          src="/model-s.webp"
+          alt=""
+          class="h-full w-full object-cover object-center"
+        />
+        <div
+          slot="footer"
+          class="flex flex-col md:flex-row gap-x-6 mx-6 md:mx-auto"
+        >
+          <a
+            class="bg-white text-black text-sm rounded font-medium px-12 py-3 inline-block hover:bg-black hover:text-white transition-colors mb-4 md:mb-0"
+            href="">Custom Order</a
+          >
+          <a
+            class="bg-gray-900/50 text-white text-sm rounded font-medium text-white px-12 py-3 inline-block hover:bg-black hover:text-white transition-colors mb-4 md:mb-0"
+            href="">Demo Drive</a
           >
         </div>
       </Section>

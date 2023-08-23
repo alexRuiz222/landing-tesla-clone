@@ -1,54 +1,414 @@
 ---
+import InternetIcon from "./InternetIcon.astro";
 import Logo from "./Logo.astro";
+import NavContent from "./NavContent.astro";
+import QuestionIcon from "./QuestionIcon.astro";
+import UserIcon from "./UserIcon.astro";
 ---
 
 <header
   id="landing-header"
   class="py-4 px-10 flex items-center fixed top-0 w-full justify-between z-40 text-white transition-colors duration-300"
 >
+  <div
+    id="nav-content"
+    class="absolute -z-50 bg-white absolute left-0 right-0 top-0 pt-[75px] pb-8 transform -translate-y-full opacity-0 transition-all duration-700 ease-in-out"
+  >
+    <div class="flex justify-center pt-[6rem]">
+      <div id="content-vehicles" class="nav-item">
+        <NavContent
+          content={{
+            type: "products-options",
+            products: [
+              {
+                title: "Model S",
+                img: "Mega-Menu-Vehicles-Model-S.webp",
+                learn: "",
+                order: "",
+              },
+              {
+                title: "Model 3",
+                img: "Mega-Menu-Vehicles-Model-3.webp",
+                learn: "",
+                order: "",
+              },
+              {
+                title: "Model X",
+                img: "Mega-Menu-Vehicles-Model-X.webp",
+                learn: "",
+                order: "",
+              },
+              {
+                title: "Model Y",
+                img: "Mega-Menu-Vehicles-Model-Y.webp",
+                learn: "",
+                order: "",
+              },
+            ],
+            options: [
+              {
+                name: "Inventory",
+                link: "",
+              },
+              {
+                name: "Used Cars",
+                link: "",
+              },
+              {
+                name: "Demo Drive",
+                link: "",
+              },
+              {
+                name: "Trade-in",
+                link: "",
+              },
+              {
+                name: "Compare",
+                link: "",
+              },
+              {
+                name: "Fleet",
+                link: "",
+              },
+              {
+                name: "Cybertruck",
+                link: "",
+              },
+              {
+                name: "Semi",
+                link: "",
+              },
+              {
+                name: "Roadster",
+                link: "",
+              },
+            ],
+          }}
+        />
+      </div>
+      <div id="content-energy" class="nav-item">
+        <NavContent
+          content={{
+            type: "products-options",
+            products: [
+              {
+                title: "Solar Panels",
+                img: "Mega-Menu-Energy-Solar-Panels.webp",
+                learn: "",
+                order: "",
+              },
+              {
+                title: "Solar Roof",
+                img: "Mega-Menu-Energy-Solar-Roof.webp",
+                learn: "",
+                order: "",
+              },
+              {
+                title: "Powerwall",
+                img: "Mega-Menu-Energy-Powerwall-US.webp",
+                learn: "",
+                order: "",
+              },
+              {
+                title: "Megapack",
+                img: "Mega-Menu-Energy-Megapack.webp",
+                learn: "",
+                order: "",
+              },
+            ],
+            options: [
+              {
+                name: "Utilities",
+                link: "",
+              },
+              {
+                name: "Commercial",
+                link: "",
+              },
+              {
+                name: "Schedule a Consultation",
+                link: "",
+              },
+            ],
+          }}
+        />
+      </div>
+      <div id="content-charging" class="nav-item">
+        <NavContent
+          content={{
+            type: "products-options",
+            products: [
+              {
+                title: "Charging",
+                img: "Mega-Menu-Charging-Charging.webp",
+                learn: "",
+                order: "",
+              },
+              {
+                title: "Home Charging",
+                img: "Mega-Menu-Charging-Home-Charging.webp",
+                learn: "",
+                shop: "",
+              },
+              {
+                title: "Supercharging",
+                img: "Mega-Menu-Charging-Supercharging.webp",
+                learn: "",
+                find: "",
+              },
+            ],
+            options: [
+              {
+                name: "Charging calculator",
+                link: "",
+              },
+              {
+                name: "Trip Planner",
+                link: "",
+              },
+              {
+                name: "Supercharger Voting",
+                link: "",
+              },
+              {
+                name: "Host a Supercharger",
+                link: "",
+              },
+              {
+                name: "Commercial Charging",
+                link: "",
+              },
+              {
+                name: "Host Wall Connectors",
+                link: "",
+              },
+            ],
+          }}
+        />
+      </div>
+      <div id="content-discover" class="nav-item">
+        <NavContent
+          content={{
+            type: "options",
+            options: [
+              {
+                title: "Resources",
+                list: [
+                  {
+                    name: "Demo drive",
+                    link: "",
+                  },
+                  {
+                    name: "Insurance",
+                    link: "",
+                  },
+                  {
+                    name: "Video Guides",
+                    link: "",
+                  },
+                  {
+                    name: "Customer Stories",
+                    link: "",
+                  },
+                  {
+                    name: "Events",
+                    link: "",
+                  },
+                ],
+              },
+              {
+                title: "Location Services",
+                list: [
+                  {
+                    name: "Find Us",
+                    link: "",
+                  },
+                  {
+                    name: "Trip Planner",
+                    link: "",
+                  },
+                  {
+                    name: "Find a Collision Center",
+                    link: "",
+                  },
+                  {
+                    name: "Find a Certified Installer",
+                    link: "",
+                  },
+                ],
+              },
+              {
+                title: "Company",
+                list: [
+                  {
+                    name: "About",
+                    link: "",
+                  },
+                  {
+                    name: "Careers",
+                    link: "",
+                  },
+                  {
+                    name: "Investor Relations",
+                    link: "",
+                  },
+                ],
+              },
+            ],
+          }}
+        />
+      </div>
+      <div id="content-shop" class="nav-item">
+        <NavContent
+          content={{
+            type: "products",
+            products: [
+              {
+                title: "Charging",
+                img: "Mega-Menu-Shop-Charging.webp",
+              },
+              {
+                title: "Vehicle Accessories",
+                img: "Mega-Menu-Shop-Vehicle-Accessories.webp",
+              },
+              {
+                title: "Apparel",
+                img: "Mega-Menu-Shop-Apparel.webp",
+              },
+              {
+                title: "Lifestyle",
+                img: "Mega-Menu-Shop-Lifestyle.jpg",
+              },
+            ],
+          }}
+        />
+      </div>
+    </div>
+  </div>
+
   <div class="flex flex-grow basis-0">
     <Logo />
   </div>
 
-  <nav>
+  <nav id="main-navbar" class="hidden md:block">
     <ul
-      class="flex text-sm [&>li>a]:font-medium [&>li>a]:inline-block [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2"
+      class="flex text-sm [&>li]:font-medium [&>li]:inline-block [&>li]:inline-block [&>li]:px-4 [&>li]:py-2"
     >
-      <li><a href="">Vehicles</a></li>
-      <li><a href="">Energy</a></li>
-      <li><a href="">Charging</a></li>
-      <li><a href="">Discover</a></li>
-      <li><a href="">Shop</a></li>
+      <li class="cursor-pointer" data-nav-item="content-vehicles">Vehicles</li>
+      <li class="cursor-pointer" data-nav-item="content-energy">Energy</li>
+      <li class="cursor-pointer" data-nav-item="content-charging">Charging</li>
+      <li class="cursor-pointer" data-nav-item="content-discover">Discover</li>
+      <li class="cursor-pointer" data-nav-item="content-shop">Shop</li>
     </ul>
   </nav>
 
-  <nav class="flex flex-grow justify-end basis-0">
+  <nav class="md:flex flex-grow justify-end basis-0 hidden">
     <ul
-      class="flex text-sm [&>li>a]:inline-block [&>li>a]:font-medium [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2"
+      class="flex text-sm [&>li>a]:inline-block [&>li>a]:font-medium [&>li>a]:inline-block [&>li>a]:p-1"
     >
-      <li><a href="">?</a></li>
-      <li><a href="">O</a></li>
-      <li><a href="">User</a></li>
+      <li>
+        <a
+          href=""
+          class="bg-none hover:bg-white/5 hover:backdrop-blur-sm rounded"
+          ><QuestionIcon /></a
+        >
+      </li>
+      <li>
+        <a
+          href=""
+          class="bg-none hover:bg-white/5 hover:backdrop-blur-sm rounded"
+          ><InternetIcon /></a
+        >
+      </li>
+      <li>
+        <a
+          href=""
+          class="bg-none hover:bg-white/5 hover:backdrop-blur-sm rounded"
+          ><UserIcon /></a
+        >
+      </li>
     </ul>
   </nav>
 
+  <nav class="block md:hidden">
+    <button
+      class="bg-black/[.05] hover:backdrop-blur-sm rounded py-1 px-5"
+      id="menu-btn"
+    >
+      Menu</button
+    >
+  </nav>
+  <!-- -translate-y-full -->
   <div
-    id="menu-backdrop"
-    class={`
+    id="mobile-menu"
+    class="bg-white fixed w-screen h-screen text-black top-0 left-0 -translate-y-full opacity-0 transition-opacity duration-300 py-5 px-8"
+  >
+    <div class="flex justify-end">
+      <button
+        id="close-menu"
+        class="bg-none hover:bg-black/[.05] hover:backdrop-blur-sm rounded p-1"
+        ><svg
+          class="h-6 tds-icon tds-icon-close tds-modal-close-icon"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          ><path
+            fill="currentColor"
+            d="M18.53 17.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.748.748 0 0 1-1.06 0 .75.75 0 0 1 0-1.06L10.94 12 5.47 6.53a.75.75 0 1 1 1.06-1.06L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47z"
+          ></path></svg
+        ></button
+      >
+    </div>
+    <ul class="mt-16 [&>li]:my-2">
+      <li class="hover:bg-black/[0.05] rounded px-2 py-3 flex items-center">
+        <span class="flex-1">Vehicles</span>
+        <img src="arrow-right.svg" class="w-4" alt="" />
+      </li>
+      <li class="hover:bg-black/[0.05] rounded px-2 py-3 flex items-center">
+        <span class="flex-1">Energy</span>
+        <img src="arrow-right.svg" class="w-4" alt="" />
+      </li>
+      <li class="hover:bg-black/[0.05] rounded px-2 py-3 flex items-center">
+        <span class="flex-1">Charging</span>
+        <img src="arrow-right.svg" class="w-4" alt="" />
+      </li>
+      <li class="hover:bg-black/[0.05] rounded px-2 py-3 flex items-center">
+        <span class="flex-1">Discover</span>
+        <img src="arrow-right.svg" class="w-4" alt="" />
+      </li>
+      <li class="hover:bg-black/[0.05] rounded px-2 py-3">Shop</li>
+      <li class="hover:bg-black/[0.05] rounded px-2 py-3">Support</li>
+      <li class="hover:bg-black/[0.05] rounded px-2 py-3 flex items-center">
+        <span class="flex-1 flex">
+          <InternetIcon />
+          <span class="ml-2">United States</span>
+        </span>
+        <img src="arrow-right.svg" class="w-4" alt="" />
+      </li>
+      <li class="hover:bg-black/[0.05] rounded px-2 py-3 flex">
+        <UserIcon /><span class="ml-2">Account</span>
+      </li>
+    </ul>
+  </div>
+</header>
+<div
+  id="menu-backdrop"
+  class={`
     absolute bg-black/5 backdrop-blur-lg rounded
     left-0 top-0
     translate-x-[var(--left)] translate-y-[var(--top)] w-[var(--width)] h-[var(--height)]
     transition-all duration-500
     ease-in-out opacity-0 -z-10
    `}
-  >
-  </div>
-</header>
+>
+</div>
 
 <script>
-  const listItem = document.querySelectorAll("#landing-header li");
+  const listItem = document.querySelectorAll("#main-navbar>ul>li");
   const menuBackDrop = document.querySelector("#menu-backdrop") as HTMLElement;
-
+  const header = document.querySelector("#landing-header") as HTMLElement;
+  const navContent = document.querySelector("#nav-content") as HTMLElement;
+  const mainNavbar = document.querySelectorAll("#main-navbar>ul>li");
+  // For backdrop movement
   listItem.forEach((item) => {
     item.addEventListener("mouseenter", ({ target }) => {
       const { left, top, width, height } = target.getBoundingClientRect();
@@ -60,6 +420,9 @@ import Logo from "./Logo.astro";
 
       menuBackDrop.style.opacity = "1";
       menuBackDrop.style.visibility = "visible";
+      header.style.color = "black";
+      navContent.classList.add("translate-y-0");
+      navContent.classList.add("opacity-100");
     });
 
     item.addEventListener("mouseleave", () => {
@@ -67,10 +430,37 @@ import Logo from "./Logo.astro";
       menuBackDrop.style.visibility = "hidden";
     });
   });
-</script>
 
-<script>
-  const header = document.querySelector("#landing-header") as HTMLElement;
+  mainNavbar.forEach((li) => {
+    let element = li.getAttribute("data-nav-item");
+    li.addEventListener("mouseenter", () => {
+      const navitems = document.querySelectorAll(".nav-item");
+      hideAllLists(navitems);
+      const item = document.querySelector(`#${element}`) as HTMLElement;
+      if (item) {
+        const content = item?.querySelector("div");
+        content?.classList.remove("opacity-0");
+        item.classList.remove("hidden");
+      }
+    });
+  });
+
+  const hideAllLists = (list) => {
+    list.forEach((li) => {
+      li.querySelector("div").classList.add("opacity-0");
+      li.classList.add("hidden");
+    });
+  };
+  // add eventy listener for dectection leave in content nav
+  navContent.addEventListener("mouseleave", () => {
+    const color = header.getAttribute("data-header-color");
+    header.style.color = color;
+    navContent.classList.remove("translate-y-0");
+    navContent.classList.remove("opacity-100");
+  });
+
+  // for header color changing
+
   const observerOptions = {
     root: null,
     rootMargin: "0px", // immeadiatly when the element is visible
@@ -91,4 +481,20 @@ import Logo from "./Logo.astro";
     ".landing-section"
   ) as NodeListOf<HTMLElement>;
   sections.forEach((section) => observer.observe(section));
+</script>
+
+<script>
+  const mobileMenu = document.querySelector("#mobile-menu");
+  const menuBtn = document.querySelector("#menu-btn");
+  const closeMenu = document.querySelector("#close-menu");
+  menuBtn.addEventListener("click", () => {
+    // alert("click");
+    mobileMenu.classList.add("translate-y-0");
+    mobileMenu.classList.add("opacity-100");
+  });
+
+  closeMenu.addEventListener("click", () => {
+    mobileMenu.classList.remove("translate-y-0");
+    mobileMenu.classList.remove("opacity-100");
+  });
 </script>

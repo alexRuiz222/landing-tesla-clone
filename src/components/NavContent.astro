@@ -1,0 +1,87 @@
+---
+const { content } = Astro.props;
+---
+
+<div class="px-8 transition-all duration-500 opacity-0">
+  {
+    content.type == "products-options" && (
+      <div class="flex">
+        <div class=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 ">
+          {content.products.map((product) => (
+            <div class="text-center">
+              <a href="">
+                {" "}
+                <img src={product.img} class="max-w-[220px]" />
+              </a>
+              <h3>{product.title}</h3>
+              <div class="flex justify-center [&>a]:underline [&>a]:underline-offset-4 [&>a]:mx-2 [&>a]:font-thin">
+                {product.learn != undefined && (
+                  <a href={product.learn}>Learn</a>
+                )}
+                {product.order != undefined && (
+                  <a href={product.order}>Order</a>
+                )}
+                {product.shop != undefined && <a href={product.shop}>Shop</a>}
+                {product.find != undefined && <a href={product.find}>Find</a>}
+              </div>
+            </div>
+          ))}
+        </div>
+        <div class="border-r-2 border-gray-200 mx-[50px] h-100" />
+        <div class="flex-none w-25 text-sm ">
+          <ul>
+            {content.options.map((option) => (
+              <li class="font-medium my-3 hover:[&>a]:border-b-2 hover:[&>a]:border-gray-600">
+                <a
+                  href=""
+                  class="border-0  transition transition-border duration-100 ease-in"
+                >
+                  {option.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    )
+  }
+
+  {
+    content.type == "options" && (
+      <div class=" grid grid-cols-1 sm:grid-cols-3 gap-4 ">
+        {content.options.map((option) => (
+          <div>
+            <span class="font-thin text-sm">{option.title}</span>
+            <ul>
+              {option.list.map((li) => (
+                <li class="font-medium text-sm my-3 hover:[&>a]:border-b-2 hover:[&>a]:border-gray-600">
+                  <a
+                    href=""
+                    class="border-0  transition transition-border duration-100 ease-in"
+                  >
+                    {li.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    )
+  }
+
+  {
+    content.type === "products" && (
+      <div class=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 ">
+        {content.products.map((product) => (
+          <div class="text-center">
+            <a href="">
+              <img src={product.img} class="max-w-[220px]" />
+            </a>
+            <h3>{product.title}</h3>
+          </div>
+        ))}
+      </div>
+    )
+  }
+</div>
